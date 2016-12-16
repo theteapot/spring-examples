@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: hello.ApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.066 sec <<< FAILURE! - in hello.ApplicationTest
+homePage(hello.ApplicationTest)  Time elapsed: 0.249 sec  <<< FAILURE!
+java.lang.AssertionError: Response content
+Expected: a string containing "Get your greeting"
+     but: was "<!DOCTYPE HTML>
+
+<html>
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Hello, null!</p>
+</body>
+</html>
+"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.web.servlet.result.ContentResultMatchers$4.match(ContentResultMatchers.java:137)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at hello.ApplicationTest.homePage(ApplicationTest.java:43)
+
